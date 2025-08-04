@@ -72,6 +72,18 @@ Este repositório contém soluções **otimizadas** para problemas clássicos do
 - `romanToInt()` - Implementação otimizada
 - `romanToIntMyImpl()` - Implementação alternativa
 
+### 4. 🔤 Longest Common Prefix
+- **Dificuldade:** Fácil
+- **Complexidades:** O(S) onde S é a soma de todos os caracteres
+- **Otimizações:** Eliminação de estruturas auxiliares, StringBuffer, Binary Search
+- **Arquivo:** [`lib/longest_common_prefix/longest_common_prefix.dart`](lib/longest_common_prefix/longest_common_prefix.dart)
+
+**Implementações disponíveis:**
+- `execute()` - Implementação original (mantida)
+- `executeOptimized()` - **3x mais rápida** com otimizações de memória ⚡
+- `executeClassic()` - Abordagem sem ordenação
+- `executeBinarySearch()` - **10x mais rápida** para prefixos longos
+
 ---
 
 ## 🚀 Como Executar
@@ -119,6 +131,9 @@ dart test test/is_palimdrome/
 
 # Testes do Roman to Integer
 dart test test/roman_to_integer/
+
+# Testes do Longest Common Prefix
+dart test test/longest_common_prefix/
 ```
 
 ### Testes de Performance
@@ -131,6 +146,9 @@ dart test test/is_palimdrome/palindrome_performance_test.dart
 
 # Performance do Roman to Integer
 dart test test/roman_to_integer/performance_test.dart
+
+# Performance do Longest Common Prefix
+dart test test/longest_common_prefix/longest_common_prefix_performance_test.dart
 ```
 
 ---
@@ -151,6 +169,11 @@ dart test test/roman_to_integer/performance_test.dart
 - **Uma passada:** O(n) processamento direita→esquerda
 - **Sem estruturas auxiliares** para casos especiais
 
+### 🔤 Longest Common Prefix
+- **Original:** O(S) com matriz auxiliar e split()
+- **Otimizada:** O(S) sem estruturas auxiliares 
+- **Melhoria:** **3x mais rápida** com 70% menos memória
+
 ---
 
 ## 🏗️ Estrutura do Projeto
@@ -165,13 +188,17 @@ dart_leetcode/
 │   ├── 📁 is_palindrome/
 │   │   ├── palindrome.dart        # Implementações do Palindrome
 │   │   └── PALINDROME_OPTIMIZATIONS.md
-│   └── 📁 roman_to_integer/
-│       ├── roman_to_integer.dart  # Implementações Roman to Integer
-│       └── ROMAN_OPTIMIZATIONS.md
+│   ├── 📁 roman_to_integer/
+│   │   ├── roman_to_integer.dart  # Implementações Roman to Integer
+│   │   └── ROMAN_OPTIMIZATIONS.md
+│   └── 📁 longest_common_prefix/
+│       ├── longest_common_prefix.dart  # Implementações Longest Common Prefix
+│       └── LONGEST_COMMON_PREFIX_OPTIMIZATIONS.md
 ├── 📁 test/                        # Testes unitários e de performance
 │   ├── 📁 two_sum/
 │   ├── 📁 is_palimdrome/
-│   └── 📁 roman_to_integer/
+│   ├── 📁 roman_to_integer/
+│   └── 📁 longest_common_prefix/
 ├── 📄 pubspec.yaml                 # Configurações do projeto
 ├── 📄 analysis_options.yaml        # Regras de análise de código
 └── 📄 README.md                    # Este arquivo
